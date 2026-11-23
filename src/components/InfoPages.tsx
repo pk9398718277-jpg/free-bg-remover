@@ -17,8 +17,9 @@ export function InfoPages({ route, onNavigateHome, onNavigate }: InfoPagesProps)
   const [formError, setFormError] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleContactSubmit = (e: FormEvent) => {
+  const handleContactSubmit = async (e: FormEvent) => {
     e.preventDefault();
+
     const trimmedName = name.trim();
     const trimmedEmail = email.trim();
     const trimmedMessage = message.trim();
@@ -27,17 +28,50 @@ export function InfoPages({ route, onNavigateHome, onNavigate }: InfoPagesProps)
       setFormError('Please enter your name.');
       return;
     }
+
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail)) {
       setFormError('Please enter a valid email address.');
       return;
     }
+
     if (trimmedMessage.length < 10) {
       setFormError('Please enter a message of at least 10 characters.');
       return;
     }
 
     setFormError(null);
-    setSubmitted(true);
+
+    try {
+      const response = await fetch(
+        'https://formsubmit.co/ajax/freebgremover.support@gmail.com',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            name: trimmedName,
+            email: trimmedEmail,
+            subject: subject,
+            message: trimmedMessage,
+            _subject: `[Free BG Remover] ${subject}`,
+          }),
+        }
+      );
+
+      const data = await response.json();
+
+      if (!response.ok || data.success === 'false') {
+        throw new Error('Message could not be sent.');
+      }
+
+      setSubmitted(true);
+    } catch {
+      setFormError('Unable to send your message. Please try again.');
+    }
+  };
+
   };
 
   const resetContactForm = () => {
