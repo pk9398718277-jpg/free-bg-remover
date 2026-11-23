@@ -72,8 +72,6 @@ export function InfoPages({ route, onNavigateHome, onNavigate }: InfoPagesProps)
     }
   };
 
-  };
-
   const resetContactForm = () => {
     setName('');
     setEmail('');
@@ -178,13 +176,11 @@ export function InfoPages({ route, onNavigateHome, onNavigate }: InfoPagesProps)
                   <div className="flex items-start gap-2.5">
                     <Mail className="mt-0.5 h-4 w-4 shrink-0 text-indigo-600" aria-hidden="true" />
                     <div>
-                      <p className="font-semibold text-slate-900">Planned Contact Address</p>
-                      <p className="text-xs text-slate-500">support@freebgremover.in</p>
+                      <p className="font-semibold text-slate-900">Email Support</p>                      
+                      <p className="text-xs text-slate-500">freebgremover.support@gmail.com</p>
                     </div>
                   </div>
-                  <p className="text-xs text-slate-500">
-                    Note: FreeBGRemover.in is the planned project domain and has not been connected to live mail servers yet.
-                  </p>
+                  
                 </div>
               </div>
             </div>
@@ -195,18 +191,13 @@ export function InfoPages({ route, onNavigateHome, onNavigate }: InfoPagesProps)
                   <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-6 text-center">
                     <CheckCircle2 className="mx-auto h-9 w-9 text-emerald-600" aria-hidden="true" />
                     <h2 className="mt-3 font-display text-lg font-bold text-slate-950">
-                      Message ready to send
+                      Message sent successfully
                     </h2>
                     <p className="mt-2 text-sm text-slate-600">
-                      Thank you, {name}. Your inquiry regarding <strong className="text-slate-800">{subject}</strong> has been prepared. You can open it directly in your email client:
-                    </p>
+  Thank you, {name}. Your message has been sent to our support team.
+</p>
                     <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
-                      <a
-                        href={`mailto:support@freebgremover.in?subject=${encodeURIComponent(`[Free BG Remover] ${subject} - ${name}`)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`}
-                        className="rounded-lg bg-gradient-to-r from-indigo-600 to-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-xs hover:brightness-110"
-                      >
-                        Open Email Draft
-                      </a>
+              
                       <button
                         type="button"
                         onClick={resetContactForm}
