@@ -60,6 +60,80 @@ export function LandingSections() {
 
   return (
     <div className="bg-white">
+      
+      {/* SEO INTRODUCTION */}
+      <section id="about-tool" className="border-t border-slate-200/80 bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold text-indigo-600">Free AI Background Remover</p>
+            <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+              Remove Image Backgrounds Online for Free
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-slate-600">
+              Free BG Remover is an online AI background remover that helps you
+              remove backgrounds from photos directly in your browser. Upload
+              your JPG, JPEG, PNG, or WEBP image, let AI identify the main
+              subject, and download your result as a transparent PNG.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-slate-600">
+              Create clean images for product listings, profile pictures,
+              presentations, websites, and social media designs. No account or
+              external API key is required to use the tool.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* IMAGE QUALITY */}
+      <section id="image-quality" className="border-t border-slate-200/80 bg-slate-50/50 py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <p className="text-sm font-semibold text-indigo-600">Image Quality</p>
+            <h2 className="mt-2 font-display text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+              High-Quality Background Removal for Your Photos
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-slate-600">
+              Create clean cutouts while keeping your original image dimensions.
+              Choose the available processing mode and preview the result before
+              downloading.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: 'Full-Resolution Export',
+                description: 'Download your cutout at the original image dimensions.',
+              },
+              {
+                title: 'Detailed Edges',
+                description: 'AI segmentation helps separate subjects from backgrounds, including fine details.',
+              },
+              {
+                title: 'Transparent PNG',
+                description: 'Export images with a transparent background for flexible use.',
+              },
+              {
+                title: 'No Watermark',
+                description: 'Download clean results without an added watermark.',
+              },
+            ].map((feature) => (
+              <div
+                key={feature.title}
+                className="rounded-2xl border border-slate-200 bg-white p-6"
+              >
+                <h3 className="font-display text-lg font-bold text-slate-950">
+                  {feature.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* HOW IT WORKS */}
       <section id="how-it-works" className="border-t border-slate-200/80 bg-slate-50/50 py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
