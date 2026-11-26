@@ -123,8 +123,7 @@ export default function App() {
 
     const canonicalEl = document.querySelector('link[rel="canonical"]');
     if (canonicalEl) {
-canonicalEl.setAttribute('href', `https://free-bg-remover-52n.pages.dev${meta.canonicalPath}`);
-    }
+canonicalEl.setAttribute('href', `https://freebgremover.in${meta.canonicalPath}`);    }
   }, [currentRoute]);
 
   useEffect(() => {
