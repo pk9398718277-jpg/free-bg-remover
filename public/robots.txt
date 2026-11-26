@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://free-bg-remover-52n.pages.dev/sitemap.xml
+
+Sitemap: https://freebgremover.in/sitemap.xml
