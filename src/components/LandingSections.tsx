@@ -267,6 +267,30 @@ export function LandingSections() {
           </div>
         </div>
       </section>
+            {/* RELATED BACKGROUND REMOVAL GUIDE */}
+      <section className="border-t border-slate-200 bg-white py-12 sm:py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-sm font-semibold text-indigo-600">
+              Free Image Editing Guide
+            </p>
+            <h2 className="mt-2 font-display text-2xl font-bold tracking-tight text-slate-950 sm:text-3xl">
+              Remove Background from Image Online
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-slate-600">
+              Learn how to remove image backgrounds, create transparent PNGs,
+              and prepare clean photos for websites, product listings, and
+              social media using Free BG Remover.
+            </p>
+            <a
+              href="/remove-background-from-image"
+              className="mt-5 inline-flex font-semibold text-indigo-600 underline underline-offset-4 hover:text-indigo-800"
+            >
+              Read our complete background removal guide →
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
