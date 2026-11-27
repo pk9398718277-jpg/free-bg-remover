@@ -45,6 +45,7 @@ function normalizeRoute(pathname: string): PageRoute {
   if (cleaned === '/about') return '/about';
   if (cleaned === '/contact') return '/contact';
   if (cleaned === '/privacy-policy' || cleaned === '/privacy') return '/privacy-policy';
+  if (cleaned === '/remove-background-from-image') return '/remove-background-from-image';
   return '/';
 }
 
@@ -53,9 +54,9 @@ const ROUTE_METADATA: Record<
   { title: string; description: string; canonicalPath: string }
 > = {
   '/': {
-    title: 'Free BG Remover - Free AI Background Remover Online',
+    title: 'Free Background Remover Online | AI BG Remover',
     description:
-      'Remove image backgrounds online for free with AI. Upload your photo and download a transparent PNG in seconds.',
+      'Remove image backgrounds online for free with our AI background remover. Upload a JPG, PNG or WEBP photo and download a transparent PNG in seconds.',
     canonicalPath: '/',
   },
   '/about': {
@@ -75,6 +76,12 @@ const ROUTE_METADATA: Record<
     description:
       'Read how Free BG Remover processes images locally in your browser with zero server uploads and no user tracking.',
     canonicalPath: '/privacy-policy',
+  },
+  '/remove-background-from-image': {
+    title: 'Remove Background from Image Online Free | Free BG Remover',
+    description:
+      'Remove background from any image online for free with AI. Create clean, transparent PNG images in seconds using Free BG Remover.',
+    canonicalPath: '/remove-background-from-image',
   },
 };
 
