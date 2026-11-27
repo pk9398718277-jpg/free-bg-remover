@@ -70,7 +70,7 @@ export function FooterAndModals({ currentRoute, onNavigate }: FooterProps) {
         </div>
 
         <div className="mt-8 border-t border-slate-100 pt-6 flex flex-col gap-2 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Free BG Remover · Planned domain: FreeBGRemover.in</p>
+          <p>© {new Date().getFullYear()} Free BG Remover. All rights reserved.</p>
           <p>Free Background Remover · Supports JPG, JPEG, PNG and WEBP</p>
         </div>
       </div>
