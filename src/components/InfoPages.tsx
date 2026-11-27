@@ -1,7 +1,12 @@
 import { useState, type FormEvent } from 'react';
 import { ArrowLeft, CheckCircle2, Mail, ShieldCheck, Sparkles } from 'lucide-react';
 
-export type PageRoute = '/' | '/about' | '/contact' | '/privacy-policy';
+export type PageRoute =
+  | '/'
+  | '/about'
+  | '/contact'
+  | '/privacy-policy'
+  | '/remove-background-from-image';
 
 interface InfoPagesProps {
   route: Exclude<PageRoute, '/'>;
