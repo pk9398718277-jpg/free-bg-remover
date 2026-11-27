@@ -358,6 +358,103 @@ export function InfoPages({ route, onNavigateHome, onNavigate }: InfoPagesProps)
             </div>
           </article>
         )}
+                {/* REMOVE BACKGROUND FROM IMAGE SEO PAGE */}
+        {route === '/remove-background-from-image' && (
+          <article className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
+            <p className="text-sm font-semibold text-indigo-600">
+              Free Online Image Tool
+            </p>
+
+            <h1 className="mt-2 font-display text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
+              Remove Background from Image Online Free
+            </h1>
+
+            <p className="mt-4 text-base leading-relaxed text-slate-600">
+              Want to remove the background from an image? Free BG Remover
+              helps you create transparent PNG images online for free.
+              Upload your photo, let the AI process it, and download your
+              result in just a few steps.
+            </p>
+
+            <div className="mt-8 space-y-6 text-sm leading-relaxed text-slate-600">
+              <section>
+                <h2 className="font-display text-xl font-bold text-slate-950">
+                  How to Remove Background from an Image
+                </h2>
+                <ol className="mt-3 list-decimal space-y-2 pl-5">
+                  <li>Open the Free BG Remover homepage.</li>
+                  <li>Upload your JPG, JPEG, PNG, or WEBP image.</li>
+                  <li>Wait while the AI processes your image.</li>
+                  <li>Preview the result and download your transparent PNG.</li>
+                </ol>
+              </section>
+
+              <section>
+                <h2 className="font-display text-xl font-bold text-slate-950">
+                  Remove Image Backgrounds for Different Uses
+                </h2>
+                <p className="mt-2">
+                  A transparent background can make images easier to use
+                  in product listings, social media designs, presentations,
+                  profile pictures, and creative projects. You can use a
+                  background-free image wherever a clean cutout is needed.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="font-display text-xl font-bold text-slate-950">
+                  Why Use Free BG Remover?
+                </h2>
+                <ul className="mt-3 list-disc space-y-2 pl-5">
+                  <li>Free online background removal tool.</li>
+                  <li>Supports JPG, JPEG, PNG, and WEBP images.</li>
+                  <li>AI-powered image background removal.</li>
+                  <li>Download your result as a transparent PNG.</li>
+                  <li>No account registration required.</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="font-display text-xl font-bold text-slate-950">
+                  Frequently Asked Questions
+                </h2>
+
+                <h3 className="mt-4 font-semibold text-slate-950">
+                  Is this background remover free?
+                </h3>
+                <p className="mt-2">
+                  Yes. You can use Free BG Remover online for free to remove
+                  image backgrounds and download transparent PNG results.
+                </p>
+
+                <h3 className="mt-4 font-semibold text-slate-950">
+                  Which image formats are supported?
+                </h3>
+                <p className="mt-2">
+                  You can upload JPG, JPEG, PNG, and WEBP images.
+                </p>
+
+                <h3 className="mt-4 font-semibold text-slate-950">
+                  How can I download a transparent image?
+                </h3>
+                <p className="mt-2">
+                  Upload your image, wait for background removal to finish,
+                  and use the download option to save the transparent PNG.
+                </p>
+              </section>
+            </div>
+
+            <div className="mt-8 border-t border-slate-200 pt-6">
+              <button
+                type="button"
+                onClick={onNavigateHome}
+                className="rounded-xl bg-indigo-600 px-6 py-3 font-semibold text-white transition hover:bg-indigo-700"
+              >
+                Remove Background Now
+              </button>
+            </div>
+          </article>
+        )}
       </div>
     </section>
   );
